@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { updateFilter } from 'components/redux/phonebookSlice';
+import { selectFilter } from 'components/redux/selectors';
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.phoneBook.filter);
+  const filter = useSelector(selectFilter);
   const handleFilterChange = event => {
     dispatch(updateFilter(event.target.value));
   };
