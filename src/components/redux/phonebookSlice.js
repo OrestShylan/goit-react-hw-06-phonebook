@@ -28,6 +28,7 @@ export const phoneBookSlice = createSlice({
 const persistConfig = {
   key: 'phoneBook',
   storage,
+  whitelist: ['items'],
 };
 
 export const phoneBookReducer = persistReducer(
